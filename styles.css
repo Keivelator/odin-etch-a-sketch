@@ -14,7 +14,3 @@ div.grid {
     border: 1px solid black;
     flex: 1;
 }
-
-div.grid:hover {
-    background-color: gray;
-}

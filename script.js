@@ -13,6 +13,9 @@ function createGrid () {
         for (j = 1; j <= gridSize; j++) {
             const grid = document.createElement('div');
             grid.className = 'grid';
+            grid.addEventListener('mouseover', () => {
+                grid.style.backgroundColor = 'gray';
+            })
             // grid.textContent = `${j}`;
             gridRow.appendChild(grid);
         }
@@ -26,8 +29,6 @@ sidesSelect.addEventListener('click', () => {
     } while (gridSize >= 100);
     createGrid();
 })
-
-
 
 createGrid ();
 
