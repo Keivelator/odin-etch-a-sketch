@@ -1,16 +1,18 @@
 div.container {
-    width: 980px;
-    height: 980px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
 }
 
 div.grid-row {
     display: flex;
+    flex: 1;
 }
 
 div.grid {
-    /* width: 20px;
-    height: 20px; */
     border: 1px solid black;
+    flex: 1;
 }
 
 div.grid:hover {

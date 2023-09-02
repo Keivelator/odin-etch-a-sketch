@@ -13,7 +13,7 @@ function createGrid () {
         for (j = 1; j <= gridSize; j++) {
             const grid = document.createElement('div');
             grid.className = 'grid';
-            grid.textContent = `${j}`;
+            // grid.textContent = `${j}`;
             gridRow.appendChild(grid);
         }
     }
@@ -21,9 +21,13 @@ function createGrid () {
 
 const sidesSelect = document.querySelector('.sides-select');
 sidesSelect.addEventListener('click', () => {
-    gridSize = Number(prompt("Grid size: ", "16"));
+    do {
+        gridSize = Number(prompt("Grid size: ", "16"));
+    } while (gridSize >= 100);
     createGrid();
 })
+
+
 
 createGrid ();
 
