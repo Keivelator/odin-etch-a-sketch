@@ -1,6 +1,11 @@
 const container = document.querySelector('.container');
 let gridSize = 16;
 
+function randomColor () {
+    let color = Math.floor(Math.random() * 255)
+    return color;
+}
+
 function createGrid () {
     while (container.hasChildNodes()) {
         container.removeChild(container.firstChild);
@@ -14,7 +19,7 @@ function createGrid () {
             const grid = document.createElement('div');
             grid.className = 'grid';
             grid.addEventListener('mouseover', () => {
-                grid.style.backgroundColor = 'gray';
+                grid.style.backgroundColor = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
             })
             // grid.textContent = `${j}`;
             gridRow.appendChild(grid);
